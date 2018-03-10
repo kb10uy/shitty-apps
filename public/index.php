@@ -30,5 +30,17 @@ $request = $container->get(ServerRequestInterface::class);
 $response = $container->get(ResponseInterface::class);
 $emitter = $container->get('emitter');
 
-$response = (new \Application\Mpyw($request, $response))->handle();
+$shitName = ($request->getServerParams())['SHIT_NAME'] ?? '';
+$shitClass = '\Application\\' . $shitName;
+$shit = null;
+
+if (class_exists($shitClass)) {
+    $shit = new $shitClass($request, $response);
+    $shit->before();
+    $response = $shit->handle();
+    $shit->after();
+} else {
+    $response = $response->withStatus(500);
+}
+
 $emitter->emit($response);
