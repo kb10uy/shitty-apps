@@ -23,7 +23,7 @@ class Mpyw extends Kb10uyApplication
 
     public function handle(): ResponseInterface
     {
-        $result = array_rand(static::MPYW_URLS);
+        $result = static::MPYW_URLS[array_rand(static::MPYW_URLS)];
 
         $response = $this->response
             ->withHeader('Content-Type', 'text/plain')
