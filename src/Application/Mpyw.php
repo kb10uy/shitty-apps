@@ -10,19 +10,20 @@ use Library\Kb10uyApplication;
 class Mpyw extends Kb10uyApplication
 {
     public const MPYW_URLS = [
-        'https://twitter.com/mpyw',
-        'https://github.com/mpyw',
-        'https://qiita.com/mpyw',
-        'http://mpyw.hateblo.jp',
-        'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13149033688',
-        'http://nyaruko.com',
-        'http://www.gochiusa.com',
+        'https://twitter.com/mpyw',                                                 // 元祖ホモの輪
+        'https://github.com/mpyw',                                                  // GitHub
+        'https://qiita.com/mpyw',                                                   // Qiita
+        'http://mpyw.hateblo.jp',                                                   // はてブロ
+        'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13149033688',    // 実務経験
+        'http://nyaruko.com',                                                       // ニャル子
+        'http://www.gochiusa.com',                                                  // ごちうさ
+        'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11152944766',    // くだらん解答
+        'https://codeiq.jp/magazine/2015/11/31368/',                                // PHP界のプリンス
     ];
 
     public function handle(): ResponseInterface
     {
-        $number = mt_rand(0, count(static::MPYW_URLS) - 1);
-        $result = static::MPYW_URLS[$number];
+        $result = \array_rand(static::MPYW_URLS[$number]);
 
         $response = $this->response
             ->withHeader('Content-Type', 'text/plain')
