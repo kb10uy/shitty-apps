@@ -1,0 +1,21 @@
+{
+    "name": "kb10uy/php-cgi",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Yuu Kobayashi",
+            "email": "kb10uy@kb10uy.org"
+        }
+    ],
+    "require": {
+        "guzzlehttp/psr7": "^1.4",
+        "php-di/php-di": "^6.0",
+        "friendsofphp/php-cs-fixer": "^2.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Library\\": "./Library/",
+            "Application\\": "./Application"
+        }
+    }
+}
