@@ -11,14 +11,10 @@ class Mpyw extends Kb10uyApplication
 {
     public function handle(): ResponseInterface
     {
-        var_dump($this);
         $response = $this->response
-            ->withHeader('Content-Type', [
-                'text/plain',
-                'charset=utf-8',
-            ])
-            ->withStatus(200)
-            ->withBody(stream_for('s'));
+            ->withHeader('Content-Type', 'text/plain')
+            ->withStatus(200);
+        $response->getBody()->write('a');
         return $response;
     }
 }

@@ -1,5 +1,6 @@
 {
     "name": "kb10uy/php-cgi",
+    "description": "shitty apps",
     "type": "project",
     "authors": [
         {
@@ -8,9 +9,9 @@
         }
     ],
     "require": {
-        "guzzlehttp/psr7": "^1.4",
         "php-di/php-di": "^6.0",
-        "friendsofphp/php-cs-fixer": "^2.10"
+        "friendsofphp/php-cs-fixer": "^2.10",
+        "zendframework/zend-diactoros": "^1.7"
     },
     "autoload": {
         "psr-4": {
