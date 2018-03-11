@@ -3,7 +3,6 @@ namespace Application;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use function GuzzleHttp\Psr7\stream_for;
 
 use Library\Kb10uyApplication;
 

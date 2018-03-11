@@ -30,7 +30,7 @@ $request = $container->get(ServerRequestInterface::class);
 $response = $container->get(ResponseInterface::class);
 $emitter = $container->get('emitter');
 
-$shitName = ($request->getServerParams())['SHIT_NAME'] ?? '';
+$shitName = $request->getServerParams()['SHIT_NAME'] ?? '';
 $shitClass = '\Application\\' . $shitName;
 $shit = null;
 
