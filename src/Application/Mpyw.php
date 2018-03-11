@@ -23,7 +23,17 @@ class Mpyw extends Kb10uyApplication
 
     public function handle(): ResponseInterface
     {
-        $result = static::MPYW_URLS[array_rand(static::MPYW_URLS)];
+        $count = $this->request->getQueryParams()['count'] ?? 1;
+        $result = '';
+
+        if ($count > 1) {
+            $keys = array_rand(static::MPYW_URLS, $count);
+            $urls = [];
+            foreach($keys as $key) $urls[] = static::MPYW_URLS[$key];
+            $result = implode(' ', $urls);
+        } else {
+            $result = static::MPYW_URLS[array_rand(static::MPYW_URLS)];
+        }
 
         $response = $this->response
             ->withHeader('Content-Type', 'text/plain')
