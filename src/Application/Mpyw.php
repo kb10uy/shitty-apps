@@ -18,6 +18,7 @@ class Mpyw extends Kb10uyApplication
         'http://www.gochiusa.com',                                                  // ごちうさ
         'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11152944766',    // くだらん解答
         'https://codeiq.jp/magazine/2015/11/31368/',                                // PHP界のプリンス
+        'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13173759308',    // ごちうさ難民的に
     ];
 
     public function handle(): ResponseInterface
