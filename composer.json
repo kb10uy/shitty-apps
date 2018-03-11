@@ -11,7 +11,8 @@
     "require": {
         "php-di/php-di": "^6.0",
         "friendsofphp/php-cs-fixer": "^2.10",
-        "zendframework/zend-diactoros": "^1.7"
+        "zendframework/zend-diactoros": "^1.7",
+        "doctrine/annotations": "^1.6"
     },
     "autoload": {
         "psr-4": {

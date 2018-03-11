@@ -3,20 +3,21 @@ namespace Library;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use DI\Annotation\Inject;
 
 class Kb10uyApplication
 {
-    /** @var ServerRequestInterface */
+    /**
+     * @Inject("request")
+     * @var ServerRequestInterface
+     */
     public $request;
 
-    /** @var ResponseInterface */
+    /**
+     * @Inject("response")
+     * @var ResponseInterface
+     */
     public $response;
-
-    public function __construct(ServerRequestInterface $request, ResponseInterface $response)
-    {
-        $this->request = $request;
-        $this->response = $response;
-    }
 
     public function before(): void
     {
