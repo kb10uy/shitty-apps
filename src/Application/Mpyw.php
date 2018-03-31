@@ -16,7 +16,7 @@ class Mpyw extends Kb10uyApplication
 
     public function handle(): ResponseInterface
     {
-        $result = $this->mpyws[array_rand($this->mpyws)];
+        $result = array_rand($this->mpyws);
         $response = $this->response
             ->withHeader('Content-Type', 'text/plain')
             ->withStatus(302)

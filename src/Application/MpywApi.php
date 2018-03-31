@@ -27,7 +27,7 @@ class MpywApi extends Kb10uyApplication
         $result = [];
 
         for ($i = 0; $i < $count; $i++) {
-            $result[] = $this->mpyws[array_rand($this->mpyws)];
+            $result[] = array_rand($this->mpyws);
         }
 
         $response = $this->response
