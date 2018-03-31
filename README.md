@@ -3,6 +3,12 @@ This gives you enermous shits.
 
 ## Implemented Shits
 + Mpyw Lottery
+  - Redirect
+  - Multiple
+  - Lootbox
++ Hydrogen Sound
+  - Fixed
+  - Multiple
 
 ## How to Install
 
