@@ -27,4 +27,8 @@ return [
         $urls = include_once DATA_DIR . 'mpyw.php';
         return $urls;
     },
+    'data.elements' => function (ContainerInterface $c) {
+        $elements = include_once DATA_DIR . 'elements.php';
+        return $elements;
+    },
 ];
