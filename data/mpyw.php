@@ -16,5 +16,6 @@ return [
     'https://web.archive.org/web/20170408045701/https://codeiq.jp/magazine/2015/11/31368/' => 35,   // PHP界のプリンス (Internet Archive)
     'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11152944766' => 30,                  // くだらん解答
     'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13173759308' => 30,                  // ごちうさ難民的に
+    'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13198470468' => 30,                  // いってる意味がよくわかりません
     'https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13149033688' => 5,                   // 実務経験
 ];
