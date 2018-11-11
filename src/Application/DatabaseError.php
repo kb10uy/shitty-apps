@@ -10,9 +10,12 @@ class DatabaseError extends Kb10uyApplication
 {
     public function handle(): ResponseInterface
     {
-        $mime = substr($this->request->getServerParams()['REQUEST_URI'], 1);
+        $mime = 
+            substr($this->request->getServerParams()['REQUEST_URI'], 1)
+            ?: $this->request->getHeader('Accept')[0]
+            ?: 'text/html';
         $response = $this->response
-            ->withHeader('Content-Type', $mime ?: 'text/html')
+            ->withHeader('Content-Type', $mime)
             ->withStatus(200);
         $response->getBody()->write("データベース接続確立エラー");
         return $response;
